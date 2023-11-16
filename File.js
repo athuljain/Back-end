@@ -24,7 +24,7 @@ const fs= require('fs')
 
 
 //Delete file
-fs.unlink('example.txt', (err) => {
-    if (err) throw err;
-    console.log('File has been deleted.');
-  });
+// fs.unlink('example.txt', (err) => {
+//     if (err) throw err;
+//     console.log('File has been deleted.');
+//   });
