@@ -1,6 +1,6 @@
 // core Module
 
-// const http=require('http');
+const http=require('http');
 
 // http.createServer(function(req,res){
 // res.write("hello from HTTP Module")
@@ -19,16 +19,16 @@
 // console.log(cl.red('hello'));
 
 
-// const axios = require('axios');
+const axios = require('axios');
 
-// // Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/1')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+// Making a GET request
+axios.get('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 
 //HTTP Module
