@@ -22,13 +22,13 @@ const http=require('http');
 const axios = require('axios');
 
 // Making a GET request
-axios.get('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// axios.get('https://jsonplaceholder.typicode.com/posts/1')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 //HTTP Module

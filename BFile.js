@@ -1,6 +1,6 @@
-const fs= require('fs')
+// const fs= require('fs')
 
-// write file
+// // write file
 
 // fs.writeFile('example.txt', 'Hello, Node.js!', 'utf8', (err) => {
 //     if (err) throw err;
