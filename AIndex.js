@@ -2,10 +2,10 @@
 
 const http=require('http');
 
-// http.createServer(function(req,res){
-// res.write("hello from HTTP Module")
-// res.end()
-// }).listen("8080")
+http.createServer(function(req,res){
+res.write("hello from HTTP Module")
+res.end()
+}).listen("8080")
 
 // local module
 // const LocalModule = require('./LocalModule');
@@ -14,10 +14,12 @@ const http=require('http');
 // console.log(LocalModule.subtract(10, 4)); 
 
 
-// let cl=require('cli-color')
+let cl=require('cli-color')
+// const UpperCase=require('upper-case')
+import UpperCase from 'upper-case';
 
-// console.log(cl.red('hello'));
-
+console.log(cl.red('hello'));
+console.log(UpperCase("hloooo"));
 
 const axios = require('axios');
 
