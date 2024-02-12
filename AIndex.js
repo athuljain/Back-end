@@ -15,11 +15,12 @@
 
 
 // let cl=require('cli-color')
-// const UpperCase=require('upper-case')
-//import UpperCase from 'upper-case';
+// // let UpperCase=require('upper-case')
 
-//'console.log(cl.yellow('hello'));
-// console.log(UpperCase("hloooo"));
+// // import UpperCase from 'upper-case';
+
+// console.log(cl.redBright('hello'));
+// // console.log(UpperCase("hloooo"));
 
 //const axios = require('axios');
 
@@ -66,7 +67,7 @@
 
 
 
-// //Routing
+//Routing
 
 // const express = require('express')
 // ;
@@ -87,6 +88,12 @@
 // app.listen(port, () => {
 //   console.log(`Server is running at http://localhost:${port}`);
 // });
+
+
+
+
+// npm i express
+// npm i cors
 
 
 // const http = require('http');
