@@ -57,6 +57,25 @@
 //   );
   
 
+//DeleteOne
+// db.users.deleteOne({ title: 'blog 1' });
+
+//DeleteMany
+// db.users.deleteMany({ title: 'blog 2' });
+
+
+//Delete collection
+//db.users.drop();
+
+
+//DeleteDataBase
+
+//db.dropDatabase();
+
+
+
+
+
 
 
 
