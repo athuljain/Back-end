@@ -24,7 +24,21 @@ const fs= require('fs')
 
 
 //Delete file
-fs.unlink('example1.js', (err) => {
-    if (err) throw err;
-    console.log('File has been deleted.');
-  });
+// fs.unlink('example1.js', (err) => {
+//     if (err) throw err;
+//     console.log('File has been deleted.');
+//   });
+
+
+
+
+   
+    // fs.writeFile('example1.txt', 'This is new content.', 'utf8', (err) => {
+    //     if (err) {
+    //         throw err;
+    //     }
+    //     console.log('File content has been replaced with new data.');
+    // });
+
+
+
