@@ -7,31 +7,30 @@
 // res.end()
 // }).listen("8080")
 
-// // local module
+// local module
 // const LocalModule = require('./LocalModule');
 
 // console.log(LocalModule.add(5, 3));      
 // console.log(LocalModule.subtract(10, 4)); 
 
 
-// let cl=require('cli-color')
-// // let UpperCase=require('upper-case')
+let cl=require('cli-color')
 
-// // import UpperCase from 'upper-case';
+console.log(cl.redBright('hello'));
 
-// console.log(cl.redBright('hello'));
-// // console.log(UpperCase("hloooo"));
 
-//const axios = require('axios');
 
-////Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/1')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+
+
+const axios = require('axios');
+//Making a GET request
+axios.get('https://jsonplaceholder.typicode.com/posts/2')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 
 //HTTP Module
@@ -96,42 +95,42 @@
 // npm i cors
 
 
-// const http = require('http');
-// const port = 3000;
+const http = require('http');
+const port = 3000;
 
-// const server = http.createServer((req, res) => {
-// // Set CORS headers to allow cross-origin requests (for demonstration purposes)
-// res.setHeader('Access-Control-Allow-Origin', '*');
-// res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-// res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+const server = http.createServer((req, res) => {
+// Set CORS headers to allow cross-origin requests (for demonstration purposes)
+res.setHeader('Access-Control-Allow-Origin', '*');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-// // Handle different HTTP methods
-// switch (req.method) {
-// case 'GET':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('GET request received');
-// break;
-// case 'POST':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('POST request received');
-// break;
-// case 'PUT':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('PUT request received');
-// break;
-// case 'DELETE':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('DELETE request received');
-// break;
-// default:
-// res.writeHead(405, { 'Content-Type': 'text/plain' });
-// res.end('Method Not Allowed');
-// }
-// });
+// Handle different HTTP methods
+switch (req.method) {
+case 'GET':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('GET request received');
+break;
+case 'POST':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('POST request received');
+break;
+case 'PUT':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('PUT request received');
+break;
+case 'DELETE':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('DELETE request received');
+break;
+default:
+res.writeHead(405, { 'Content-Type': 'text/plain' });
+res.end('Method Not Allowed');
+}
+});
 
-// server.listen(port, () => {
-// console.log(`Server listening on port ${port}`);
-// });
+server.listen(port, () => {
+console.log(`Server listening on port ${port}`);
+});
 
 
 
