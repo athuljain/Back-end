@@ -42,31 +42,31 @@ const fs= require('fs')
 
 
 
-    //node routes
+    // node routes
 
-    // const http = require('http');
+    const http = require('http');
 
-    // const port = 3000;
+    const port = 3000;
     
-    // const server = http.createServer((req, res) => {
-    //     if (req.url === '/') {
-    //         res.writeHead(200, { 'Content-Type': 'text/plain' });
-    //         res.end('Hello, this is the home page!');
-    //     } else if (req.url === '/about') {
-    //         res.writeHead(200, { 'Content-Type': 'text/plain' });
-    //         res.end('Welcome to the about page!');
-    //     } else if (req.url === '/contact') {
-    //         res.writeHead(200, { 'Content-Type': 'text/plain' });
-    //         res.end('Contact us at contact@example.com');
-    //     } else {
-    //         res.writeHead(404, { 'Content-Type': 'text/plain' });
-    //         res.end('Page not found');
-    //     }
-    // });
+    const server = http.createServer((req, res) => {
+        if (req.url === '/') {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Hello, this is the home page!');
+        } else if (req.url === '/about') {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Welcome to the about page!');
+        } else if (req.url === '/contact') {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Contact us at contact@example.com');
+        } else {
+            res.writeHead(404, { 'Content-Type': 'text/plain' });
+            res.end('Page not found');
+        }
+    });
     
-    // server.listen(port, () => {
-    //     console.log(`Server listening on port ${port}`);
-    // });
+    server.listen(port, () => {
+        console.log(`Server listening on port ${port}`);
+    });
     
 
 
