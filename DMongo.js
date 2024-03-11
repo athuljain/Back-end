@@ -1,4 +1,4 @@
-// // mongoshell
+// mongoshell
 
 // MongoDB and Mongoose
 // MongoDB is an open-source, document database designed for ease of development and scaling. This database is also used to store data.
@@ -8,69 +8,69 @@
 
 // Mongosh
 
-// Create Database - use Script  (script = db name)
+Create Database - use Script  (script = db name)
 
-//  db.createCollection("users")  - create collection name users
-
-
-// db.users.insert({title:'blog 1',body:'content'}) - insert data to users collection
+ db.createCollection("users")  - create collection name users
 
 
-// db.users.find()
+db.users.insert({title:'blog 1',body:'content'}) - insert data to users collection
 
 
-//  db.users.insertMany([{title:'blog 2',body:'content'},{title:'blog 2',body:'content'}])
+db.users.find()
 
 
-// db.users.find({title:'blog 1'})
+ db.users.insertMany([{title:'blog 2',body:'content'},{title:'blog 2',body:'content'}])
 
 
-// db.users.find().sort({title:1})
-
-// db.users.find().sort({title:-1})  
-
-// (1 is used for ascending order -1 use for descending order)
-
-// db.users.find({title:{$ne:'blog 1'}})
+db.users.find({title:'blog 1'})
 
 
-//  db.users.find({title:'blog 1',body:'content'})
+db.users.find().sort({title:1})
 
-//  db.users.find({$or :[{title:'blog 2'},{body:'content'}]})
+db.users.find().sort({title:-1})  
 
+(1 is used for ascending order -1 use for descending order)
 
-
-
-//  db.users.find().count()
-
-
-// db.users.find().limit(2)
-
-//  db.users.findOne()
+db.users.find({title:{$ne:'blog 1'}})
 
 
-//updateOne
+ db.users.find({title:'blog 1',body:'content'})
 
-// db.users.updateOne(
-//     { title: 'blog 1' },
-//     { $set: { title: 'updated blog 1' } }
-//   );
+ db.users.find({$or :[{title:'blog 2'},{body:'content'}]})
+
+
+
+
+ db.users.find().count()
+
+
+db.users.find().limit(2)
+
+ db.users.findOne()
+
+
+updateOne
+
+db.users.updateOne(
+    { title: 'blog 1' },
+    { $set: { title: 'updated blog 1' } }
+  );
   
 
-//DeleteOne
-// db.users.deleteOne({ title: 'blog 1' });
+DeleteOne
+db.users.deleteOne({ title: 'blog 1' });
 
-//DeleteMany
-// db.users.deleteMany({ title: 'blog 2' });
-
-
-//Delete collection
-//db.users.drop();
+DeleteMany
+db.users.deleteMany({ title: 'blog 2' });
 
 
-//DeleteDataBase
+Delete collection
+db.users.drop();
 
-//db.dropDatabase();
+
+DeleteDataBase
+
+db.dropDatabase();
 
 
 

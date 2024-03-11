@@ -1,11 +1,11 @@
 // core Module
 
-// const http=require('http');
+// const server=require('http');
 
-// http.createServer(function(req,res){
+// server.createServer(function(req,res){
 // res.write("hello from HTTP Module")
 // res.end()
-// }).listen("8080")
+// }).listen("5000")
 
 // local module
 // const LocalModule = require('./LocalModule');
@@ -14,42 +14,42 @@
 // console.log(LocalModule.subtract(10, 4)); 
 
 
-let cl=require('cli-color')
+// let cl=require('cli-color')
 
-console.log(cl.redBright('hello'));
-
-
+// console.log(cl.bgBlue('hello'));
 
 
 
-const axios = require('axios');
-//Making a GET request
-axios.get('https://jsonplaceholder.typicode.com/posts/2')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+
+
+// const axios = require('axios');
+// //Making a GET request
+// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=10')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 //HTTP Module
 
 
-// const http=require('http');
+const http=require('http');
 
-// const server = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
   
-//     res.end('Hello, Node.js!');
-//   });
+    res.end('Hello, Node.js!');
+  });
   
  
-//   const PORT = 3000;
-//   server.listen(PORT, () => {
-//     console.log(`Server listening on port ${PORT}`);
-//   });
+  const PORT = 3000;
+  server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+  });
 
 
 
@@ -95,42 +95,42 @@ axios.get('https://jsonplaceholder.typicode.com/posts/2')
 // npm i cors
 
 
-const http = require('http');
-const port = 3000;
+// const http = require('http');
+// const port = 3000;
 
-const server = http.createServer((req, res) => {
-// Set CORS headers to allow cross-origin requests (for demonstration purposes)
-res.setHeader('Access-Control-Allow-Origin', '*');
-res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+// const server = http.createServer((req, res) => {
+// // Set CORS headers to allow cross-origin requests (for demonstration purposes)
+// res.setHeader('Access-Control-Allow-Origin', '*');
+// res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+// res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-// Handle different HTTP methods
-switch (req.method) {
-case 'GET':
-res.writeHead(200, { 'Content-Type': 'text/plain' });
-res.end('GET request received');
-break;
-case 'POST':
-res.writeHead(200, { 'Content-Type': 'text/plain' });
-res.end('POST request received');
-break;
-case 'PUT':
-res.writeHead(200, { 'Content-Type': 'text/plain' });
-res.end('PUT request received');
-break;
-case 'DELETE':
-res.writeHead(200, { 'Content-Type': 'text/plain' });
-res.end('DELETE request received');
-break;
-default:
-res.writeHead(405, { 'Content-Type': 'text/plain' });
-res.end('Method Not Allowed');
-}
-});
+// // Handle different HTTP methods
+// switch (req.method) {
+// case 'GET':
+// res.writeHead(200, { 'Content-Type': 'text/plain' });
+// res.end('GET request received');
+// break;
+// case 'POST':
+// res.writeHead(200, { 'Content-Type': 'text/plain' });
+// res.end('POST request received');
+// break;
+// case 'PUT':
+// res.writeHead(200, { 'Content-Type': 'text/plain' });
+// res.end('PUT request received');
+// break;
+// case 'DELETE':
+// res.writeHead(200, { 'Content-Type': 'text/plain' });
+// res.end('DELETE request received');
+// break;
+// default:
+// res.writeHead(405, { 'Content-Type': 'text/plain' });
+// res.end('Method Not Allowed');
+// }
+// });
 
-server.listen(port, () => {
-console.log(`Server listening on port ${port}`);
-});
+// server.listen(port, () => {
+// console.log(`Server listening on port ${port}`);
+// });
 
 
 
