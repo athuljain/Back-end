@@ -7,6 +7,8 @@
 // res.end()
 // }).listen("5000")
 
+
+
 // local module
 // const LocalModule = require('./LocalModule');
 
@@ -16,7 +18,7 @@
 
 // let cl=require('cli-color')
 
-// console.log(cl.bgBlue('hello'));
+// console.log(cl.bgRed('hello'));
 
 
 
@@ -36,20 +38,20 @@
 //HTTP Module
 
 
-const http=require('http');
+// const http=require('http');
 
-const server = http.createServer((req, res) => {
+// const server = http.createServer((req, res) => {
     
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
   
-    res.end('Hello, Node.js!');
-  });
+//     res.end('Hello, Node.js!');
+//   });
   
  
-  const PORT = 3000;
-  server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-  });
+//   const PORT = 3000;
+//   server.listen(PORT, () => {
+//     console.log(`Server listening on port ${PORT}`);
+//   });
 
 
 
