@@ -5,7 +5,7 @@
 // server.createServer(function(req,res){
 // res.write("hello from HTTP Module")
 // res.end()
-// }).listen("5000")
+// }).listen("5001")
 
 
 
@@ -16,9 +16,11 @@
 // console.log(LocalModule.subtract(10, 4)); 
 
 
+
+
 // let cl=require('cli-color')
 
-// console.log(cl.bgRed('hello'));
+// console.log(cl.blackBright('hello'));
 
 
 
@@ -26,7 +28,7 @@
 
 // const axios = require('axios');
 // //Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=10')
+// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=5')
 //   .then(response => {
 //     console.log(response.data);
 //   })
@@ -38,33 +40,33 @@
 //HTTP Module
 
 
-// const http=require('http');
+const http=require('http');
 
-// const server = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
   
-//     res.end('Hello, Node.js!');
-//   });
+    res.end('Hello, Node.js!');
+  });
   
  
-//   const PORT = 3000;
-//   server.listen(PORT, () => {
-//     console.log(`Server listening on port ${PORT}`);
-//   });
+  const PORT = 3000;
+  server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+  });
 
 
 
 
-// const axios = require('axios');
+const axios = require('axios');
 
-// axios.get('https://jsonplaceholder.typicode.com/posts/1')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+axios.get('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 
 

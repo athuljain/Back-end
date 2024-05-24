@@ -29,7 +29,7 @@ db.users.find().sort({title:1})
 
 db.users.find().sort({title:-1})  
 
-(1 is used for ascending order -1 use for descending order)
+// (1 is used for ascending order -1 use for descending order)
 
 db.users.find({title:{$ne:'blog 1'}})
 
@@ -49,7 +49,7 @@ db.users.find().limit(2)
  db.users.findOne()
 
 
-updateOne
+// updateOne
 
 db.users.updateOne(
     { title: 'blog 1' },
@@ -57,14 +57,14 @@ db.users.updateOne(
   );
   
 
-DeleteOne
+// DeleteOne
 db.users.deleteOne({ title: 'blog 1' });
 
-DeleteMany
+// DeleteMany
 db.users.deleteMany({ title: 'blog 2' });
 
 
-Delete collection
+// Delete collection
 db.users.drop();
 
 

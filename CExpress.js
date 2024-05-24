@@ -12,7 +12,9 @@
 // app.get('/about',(req,res)=>{
 //     res.send("this is about page")
 // })
-
+// app.get('/contact',(req,res)=>{
+//   res.send("this is Contact page")
+// })
 // // Start the server
 // app.listen(port, () => {
 //   console.log(`Server listening on port ${port}`);
@@ -55,17 +57,17 @@
 
 //> Get json api
 
-const http=require('http');
-const axios = require('axios');
+// const http=require('http');
+// const axios = require('axios');
 
 
-axios.get('https://jsonplaceholder.typicode.com/posts/')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// axios.get('https://jsonplaceholder.typicode.com/posts/')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 
