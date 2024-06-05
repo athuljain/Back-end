@@ -1,72 +1,70 @@
 // core Module
 
-// const server=require('http');
+const server=require('http');
 
-// server.createServer(function(req,res){
-// res.write("hello from HTTP Module")
+server.createServer(function(req,res){
+res.write("hello from HTTP Module")
 // res.end()
-// }).listen("5001")
+}).listen("5001")
 
 
 
-// local module
-// const LocalModule = require('./LocalModule');
+//local module
+const LocalModule = require('./LocalModule');
 
-// console.log(LocalModule.add(5, 3));      
-// console.log(LocalModule.subtract(10, 4)); 
-
-
+console.log(LocalModule.add(5, 3));      
+console.log(LocalModule.subtract(10, 4)); 
 
 
-// let cl=require('cli-color')
+//Npm Module
 
-// console.log(cl.blackBright('hello'));
+let cl=require('cli-color')
 
-
-
-
-
-// const axios = require('axios');
-// //Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=5')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
-
-
-//HTTP Module
-
-
-const http=require('http');
-
-const server = http.createServer((req, res) => {
-    
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-  
-    res.end('Hello, Node.js!');
-  });
-  
- 
-  const PORT = 3000;
-  server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-  });
-
+console.log(cl.blue('hello'));
 
 
 
 const axios = require('axios');
-
-axios.get('https://jsonplaceholder.typicode.com/posts/1')
+//Making a GET request
+axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
   .then(response => {
     console.log(response.data);
   })
   .catch(error => {
     console.error(error);
   });
+
+
+//HTTP Module
+
+
+// const http=require('http');
+
+// const server = http.createServer((req, res) => {
+    
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+  
+//     res.end('Hello, Node.js!');
+//   });
+  
+ 
+//   const PORT = 3000;
+//   server.listen(PORT, () => {
+//     console.log(`Server listening on port ${PORT}`);
+//   });
+
+
+
+
+// const axios = require('axios');
+
+// axios.get('https://jsonplaceholder.typicode.com/posts/1')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 
