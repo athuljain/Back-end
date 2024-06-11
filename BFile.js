@@ -2,10 +2,10 @@ const fs= require('fs')
 
 //write file
 
-// fs.writeFile('./example1.txt', 'Hi, Node.js!', (err) => {
-//     if (err) throw err;
-//     console.log('File has been written.');
-//   });
+fs.writeFile('./example1.txt', 'Hi, Node.js!', (err) => {
+    if (err) throw err;
+    console.log('File has been written.');
+  });
 
 
 //  ReadFile
@@ -17,14 +17,14 @@ const fs= require('fs')
 
 // //append File
 
-// fs.appendFile('example1.txt', '\n good mrng.', 'utf8', (err) => {
+// fs.appendFile('example1.txt', '\n good mrng. from soften', 'utf8', (err) => {
 //     if (err) throw err;
 //     console.log('Data has been appended to the file.');
 //   });
 
 
 // // // // Delete file
-// fs.unlink('example.txt', (err) => {
+// fs.unlink('example1.txt', (err) => {
 //     if (err) throw err;
 //     console.log('File has been deleted.');
 //   });
@@ -33,12 +33,12 @@ const fs= require('fs')
 
 
    
-//     fs.writeFile('example.txt', 'This is new content.', 'utf8', (err) => {
-//         if (err) {
-//             throw err;
-//         }
-//         console.log('File content has been replaced with new data.');
-//     });
+    // fs.writeFile('example1.txt', 'This is new content.', 'utf8', (err) => {
+    //     if (err) {
+    //         throw err;
+    //     }
+    //     console.log('File content has been replaced with new data.');
+    // });
 
 
 
@@ -89,36 +89,36 @@ const fs= require('fs')
 
 
 
-    const http = require('http');
-    const url = require('url');
-    const port = 8000;
+    // const http = require('http');
+    // const url = require('url');
+    // const port = 8000;
     
-    const server = http.createServer((req, res) => {
-    // Parse the request URL
-    const parsedUrl = url.parse(req.url, true);
+    // const server = http.createServer((req, res) => {
+    // // Parse the request URL
+    // const parsedUrl = url.parse(req.url, true);
     
-    // Log the requested URL path
-    console.log(`Received ${req.method} request for ${parsedUrl.pathname}`);
+    // // Log the requested URL path
+    // console.log(`Received ${req.method} request for ${parsedUrl.pathname}`);
     
-    // Route the request based on the path
-    if (parsedUrl.pathname === '/') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello, this is the home page!');
-    } else if (parsedUrl.pathname === '/about') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Welcome to the about page!');
-    } else if (parsedUrl.pathname === '/contact') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Contact us at contact@example.com');
-    } else {
-    // Handle unknown paths with a 404 response
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Page not found');
-    }
-    });
+    // // Route the request based on the path
+    // if (parsedUrl.pathname === '/') {
+    // res.writeHead(200, { 'Content-Type': 'text/plain' });
+    // res.end('Hello, this is the home page!');
+    // } else if (parsedUrl.pathname === '/about') {
+    // res.writeHead(200, { 'Content-Type': 'text/plain' });
+    // res.end('Welcome to the about page!');
+    // } else if (parsedUrl.pathname === '/contact') {
+    // res.writeHead(200, { 'Content-Type': 'text/plain' });
+    // res.end('Contact us at contact@example.com');
+    // } else {
+    // // Handle unknown paths with a 404 response
+    // res.writeHead(404, { 'Content-Type': 'text/plain' });
+    // res.end('Page not found');
+    // }
+    // });
     
-    // Start the server
-    server.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-    });
+    // // Start the server
+    // server.listen(port, () => {
+    // console.log(`Server listening on port ${port}`);
+    // });
     

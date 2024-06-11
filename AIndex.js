@@ -1,58 +1,47 @@
 // core Module
 
-const server=require('http');
+// const server=require('http');
 
-server.createServer(function(req,res){
-res.write("hello from HTTP Module")
-// res.end()
-}).listen("5001")
-
-
+// server.createServer(function(req,res){
+// res.write("hello from HTTP Module")
+// // res.end()
+// }).listen("5001")
 
 //local module
-const LocalModule = require('./LocalModule');
+// const LocalModule = require('./LocalModule');
 
-console.log(LocalModule.add(5, 3));      
-console.log(LocalModule.subtract(10, 4)); 
+// console.log(LocalModule.add(5, 3));
+// console.log(LocalModule.subtract(10, 4));
 
+// //Npm Module
 
-//Npm Module
+// let cl=require('cli-color')
 
-let cl=require('cli-color')
+// console.log(cl.blue('hello'));
 
-console.log(cl.blue('hello'));
-
-
-
-const axios = require('axios');
-//Making a GET request
-axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
-
+// const axios = require('axios');
+// //Making a GET request
+// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 //HTTP Module
 
-
-// const http=require('http');
+// const http = require("http");
 
 // const server = http.createServer((req, res) => {
-    
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-  
-//     res.end('Hello, Node.js!');
-//   });
-  
- 
-//   const PORT = 3000;
-//   server.listen(PORT, () => {
-//     console.log(`Server listening on port ${PORT}`);
-//   });
+//   res.writeHead(200, { "Content-Type": "text/plain" });
+//   res.end("Hello, Node.js!");
+// });
 
+// const PORT = 5000;
+// server.listen(PORT, () => {
+//   console.log(`Server listening on port ${PORT}`);
+// });
 
 
 
@@ -66,8 +55,6 @@ axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
 //     console.error(error);
 //   });
 
-
-
 //Routing
 
 // const express = require('express')
@@ -75,27 +62,20 @@ axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
 // const app = express();
 // const port = 3000;
 
-
 // app.get('/', (req, res) => {
 //   res.send('Welcome to the homepage!');
 // });
-
 
 // app.get('/about', (req, res) => {
 //   res.send('About us Page.');
 // });
 
-
 // app.listen(port, () => {
 //   console.log(`Server is running at http://localhost:${port}`);
 // });
 
-
-
-
 // npm i express
 // npm i cors
-
 
 // const http = require('http');
 // const port = 3000;
@@ -133,6 +113,3 @@ axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
 // server.listen(port, () => {
 // console.log(`Server listening on port ${port}`);
 // });
-
-
-
