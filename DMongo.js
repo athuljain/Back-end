@@ -8,7 +8,7 @@
 
 // Mongosh
 
-Create Database - use Script  (script = db name)
+ Database - use Script  (script = db name)
 
  db.createCollection("users")  - create collection name users
 
@@ -19,7 +19,7 @@ db.users.insert({title:'blog 1',body:'content'}) - insert data to users collecti
 db.users.find()
 
 
- db.users.insertMany([{title:'blog 2',body:'content'},{title:'blog 2',body:'content'}])
+ db.users.insertMany([{title:'blog 3',body:'content3'},{title:'blog 4',body:'content 4'}])
 
 
 db.users.find({title:'blog 1'})

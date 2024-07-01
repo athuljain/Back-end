@@ -2,7 +2,7 @@ const fs= require('fs')
 
 //write file
 
-fs.writeFile('./example1.txt', 'Hi, Node.js!', (err) => {
+fs.writeFile('./example2.txt', 'Hi, Node.js!', (err) => {
     if (err) throw err;
     console.log('File has been written.');
   });
@@ -10,21 +10,21 @@ fs.writeFile('./example1.txt', 'Hi, Node.js!', (err) => {
 
 //  ReadFile
 
-// fs.readFile('example1.txt', 'utf-8', (err, data) => {
+// fs.readFile('example2.txt', 'utf-8', (err, data) => {
 //     if (err) throw err;
 //     console.log(data);
 //   });
 
 // //append File
 
-// fs.appendFile('example1.txt', '\n good mrng. from soften', 'utf8', (err) => {
+// fs.appendFile('example2.txt', ' good mrng. from soften', 'utf8', (err) => {
 //     if (err) throw err;
 //     console.log('Data has been appended to the file.');
 //   });
 
 
 // // // // Delete file
-// fs.unlink('example1.txt', (err) => {
+// fs.unlink('example2.txt', (err) => {
 //     if (err) throw err;
 //     console.log('File has been deleted.');
 //   });

@@ -4,20 +4,32 @@
 
 // server.createServer(function(req,res){
 // res.write("hello from HTTP Module")
-// // res.end()
-// }).listen("5001")
+// res.end()
+// }).listen("5001",()=>console.log("server running on 5001"))
 
 //local module
 // const LocalModule = require('./LocalModule');
 
 // console.log(LocalModule.add(5, 3));
 // console.log(LocalModule.subtract(10, 4));
+// console.log(LocalModule.Mul(2,3));
+
+
+
+// const Wish = require("./LocalModuleHello")
+
+// Wish()
 
 // //Npm Module
 
 // let cl=require('cli-color')
+// const Uc= require('upper-case')
 
 // console.log(cl.blue('hello'));
+// console.log(cl.bgBlueBright("hello"));
+// console.log("hello");
+// console.log(Uc.upperCase("sdfghjk"));
+
 
 // const axios = require('axios');
 // //Making a GET request
