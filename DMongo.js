@@ -8,69 +8,66 @@
 
 // Mongosh
 
- Database - use Script  (script = db name)
+//  Database - use Script  (script = db name)
 
- db.createCollection("users")  - create collection name users
-
-
-db.users.insert({title:'blog 1',body:'content'}) - insert data to users collection
+//  db.createCollection("users")  - create collection name users
 
 
-db.users.find()
+// db.users.insert({title:'blog 1',body:'content'}) - insert data to users collection
 
 
- db.users.insertMany([{title:'blog 3',body:'content3'},{title:'blog 4',body:'content 4'}])
+// db.users.find()
 
 
-db.users.find({title:'blog 1'})
+//  db.users.insertMany([{title:'blog 3',body:'content3'},{title:'blog 4',body:'content 4'}])
 
 
-db.users.find().sort({title:1})
+// db.users.find({title:'blog 1'})
 
-db.users.find().sort({title:-1})  
+
+// db.users.find().sort({title:1})
+
+// db.users.find().sort({title:-1})  
 
 // (1 is used for ascending order -1 use for descending order)
 
-db.users.find({title:{$ne:'blog 1'}})
+// db.users.find({title:{$ne:'blog 1'}})
 
 
- db.users.find({title:'blog 1',body:'content'})
+//  db.users.find({title:'blog 1',body:'content'})
 
- db.users.find({$or :[{title:'blog 2'},{body:'content'}]})
-
-
+//  db.users.find({$or :[{title:'blog 2'},{body:'content'}]})
 
 
- db.users.find().count()
 
 
-db.users.find().limit(2)
+//  db.users.find().count()
 
- db.users.findOne()
+
+// db.users.find().limit(2)
+
+//  db.users.findOne()
 
 
 // updateOne
 
-db.users.updateOne(
-    { title: 'blog 1' },
-    { $set: { title: 'updated blog 1' } }
-  );
+db.users.updateOne({ title: 'blog 1' },{ $set: { title: 'updated blog 1' } });
   
 
 // DeleteOne
-db.users.deleteOne({ title: 'blog 1' });
+// db.users.deleteOne({ title: 'blog 1' });
 
 // DeleteMany
-db.users.deleteMany({ title: 'blog 2' });
+// db.users.deleteMany({ title: 'blog 2' });
 
 
 // Delete collection
-db.users.drop();
+// db.users.drop();
 
 
-DeleteDataBase
+// DeleteDataBase
 
-db.dropDatabase();
+// db.dropDatabase();
 
 
 

@@ -22,12 +22,13 @@
 
 // //Npm Module
 
-// let cl=require('cli-color')
+let cl=require('cli-color')
 // const Uc= require('upper-case')
 
-// console.log(cl.blue('hello'));
-// console.log(cl.bgBlueBright("hello"));
-// console.log("hello");
+console.log(cl.blue('hello'));
+console.log(cl.bgBlueBright("hello"));
+console.log("hello");
+
 // console.log(Uc.upperCase("sdfghjk"));
 
 
@@ -43,17 +44,17 @@
 
 //HTTP Module
 
-// const http = require("http");
+const http = require("http");
 
-// const server = http.createServer((req, res) => {
-//   res.writeHead(200, { "Content-Type": "text/plain" });
-//   res.end("Hello, Node.js!");
-// });
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hello, Node.js!");
+});
 
-// const PORT = 5000;
-// server.listen(PORT, () => {
-//   console.log(`Server listening on port ${PORT}`);
-// });
+const PORT = 5000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
 
 
 
