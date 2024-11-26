@@ -6,8 +6,8 @@ const PModel = require('./FModel');
 // Route to add a new example
 router.post('/add', async (req, res) => {
   try {
-    const { name, description } = req.body;
-    const example = new PModel({ name, description });
+    const { name, description,price } = req.body;
+    const example = new PModel({ name, description ,price});
     const savedExample = await example.save();
     res.json(savedExample);
   } catch (error) {
