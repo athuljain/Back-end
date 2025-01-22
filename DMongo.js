@@ -1,8 +1,10 @@
 // mongoshell
 
 // MongoDB and Mongoose
-// MongoDB is an open-source, document database designed for ease of development and scaling. This database is also used to store data.
-// Mongoose is a client API for node.js which makes it easy to access our database from our Express application.
+// MongoDB is an open-source, document database designed for ease of development and scaling. 
+// This database is also used to store data.
+// Mongoose is a client API for node.js which makes it easy to access 
+// our database from our Express application.
 
 // npm install --save mongoose
 

@@ -6,10 +6,20 @@ const PModel = require('./FModel');
 // Route to add a new example
 router.post('/add', async (req, res) => {
   try {
-    const { name, description,price } = req.body;
-    const example = new PModel({ name, description ,price});
+    const { name, description, price } = req.body;
+    const example = new PModel({ name, description, price });
     const savedExample = await example.save();
     res.json(savedExample);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Route to get all examples
+router.get('/all', async (req, res) => {
+  try {
+    const examples = await PModel.find();
+    res.json(examples);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

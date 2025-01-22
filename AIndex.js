@@ -8,55 +8,55 @@
 // }).listen("5001",()=>console.log("server running on 5001"))
 
 // local module
-const LocalModule = require('./LocalModule');
+// const LocalModule = require('./LocalModule');
 
-console.log(LocalModule.add(3, 3));
-console.log(LocalModule.subtract(10, 4));
-console.log(LocalModule.Mul(2,3));                                        
+// console.log(LocalModule.add(3, 3));
+// console.log(LocalModule.subtract(10, 4));
+// console.log(LocalModule.Mul(2,3));                                        
 
 
 
-const Wish = require("./LocalModuleHello")
+// const Wish = require("./LocalModuleHello")
 
-Wish()
+// Wish()
 
 // //Npm Module
 
-let cl=require('cli-color')
-// const Uc= require('upper-case')
-
-console.log(cl.blue('hello'));
-console.log(cl.bgBlueBright("hello"));
-console.log(cl.bgMagentaBright("soften"));
-
-console.log("hello");
-
-// console.log(Uc.upperCase("sdfghjk"));
+// let cl=require('cli-color')
 
 
-// const axios = require('axios');
-// //Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+// console.log(cl.blue('hello'));
+// console.log(cl.bgBlueBright("hello"));
+// console.log(cl.bgMagentaBright("soften"));
+
+// console.log("hello");
+
+
+
+
+const axios = require('axios');
+//Making a GET request
+axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 //HTTP Module
 
-const http = require("http");
+// const http = require("http");
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello, Node.js!");
-});
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { "Content-Type": "text/plain" });
+//   res.end("Hello, Node.js!");
+// });
 
-const PORT = 5000;
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+// const PORT = 5000;
+// server.listen(PORT, () => {
+//   console.log(`Server listening on port ${PORT}`);
+// });
 
 
 
