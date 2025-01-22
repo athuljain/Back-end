@@ -34,15 +34,15 @@
 
 
 
-const axios = require('axios');
-//Making a GET request
-axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// const axios = require('axios');
+// //Making a GET request
+// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 //HTTP Module
 

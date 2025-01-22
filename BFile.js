@@ -2,10 +2,10 @@ const fs= require('fs')
 
 //write file
 
-fs.writeFile('./example2.txt', 'Hi, Node.js!', (err) => {
-    if (err) throw err;
-    console.log('File has been written.');
-  });
+// fs.writeFile('./example3.txt', 'Hi, sdckjsdc bzicbsd jbsckjwe', (err) => {
+//     if (err) throw err;
+//     console.log('File has been written.');
+//   });
 
 
 //  ReadFile
@@ -24,10 +24,10 @@ fs.writeFile('./example2.txt', 'Hi, Node.js!', (err) => {
 
 
 // // // // Delete file
-// fs.unlink('example2.txt', (err) => {
-//     if (err) throw err;
-//     console.log('File has been deleted.');
-//   });
+fs.unlink('example2.txt', (err) => {
+    if (err) throw err;
+    console.log('File has been deleted.');
+  });
 
 
 
