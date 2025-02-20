@@ -11,7 +11,7 @@
 // const LocalModule = require('./LocalModule');
 
 // console.log(LocalModule.add(3, 3));
-// console.log(LocalModule.subtract(10, 4));
+// console.log(LocalModule.subtract(10, 5));
 // console.log(LocalModule.Mul(2,3));                                        
 
 
@@ -19,6 +19,8 @@
 // const Wish = require("./LocalModuleHello")
 
 // Wish()
+
+
 
 // //Npm Module
 
@@ -28,7 +30,6 @@
 // console.log(cl.blue('hello'));
 // console.log(cl.bgBlueBright("hello"));
 // console.log(cl.bgMagentaBright("soften"));
-
 // console.log("hello");
 
 
