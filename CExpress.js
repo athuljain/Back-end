@@ -31,7 +31,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   // Set a 200 (OK) status code
-  res.status(200).send('OK');
+  res.status(200).send('Home Page');
 });
 
 
@@ -57,17 +57,17 @@ app.listen(3000, () => {
 
 //> Get json api
 
-const http=require('http');
-const axios = require('axios');
+// const http=require('http');
+// const axios = require('axios');
 
 
-axios.get('https://jsonplaceholder.typicode.com/posts/')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// axios.get('https://jsonplaceholder.typicode.com/posts/')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 
