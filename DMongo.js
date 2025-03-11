@@ -10,7 +10,7 @@
 
 // Mongosh
 
- Database - use Script // (script = db name)
+//  Database - use Script // (script = db name)
 
  db.createCollection("users")  //- create collection name users
 
