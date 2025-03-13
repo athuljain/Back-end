@@ -9,3 +9,59 @@ Non-Blocking I/O: Handles multiple requests efficiently.
 Package Manager (npm): Access thousands of reusable libraries.
 
 
+
+
+
+
+
+express js
+
+
+
+Express is the most popular Node.js web framework, and is the underlying library for a number of other popular Node.js frameworks. It provides mechanisms to:
+
+Write handlers for requests with different HTTP verbs at different URL paths (routes).
+Integrate with "view" rendering engines in order to generate responses by inserting data into templates.
+Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
+Add additional request processing "middleware" at any point within the request handling pipeline.
+
+
+
+
+
+Express.js is a fast, unopinionated, and minimalist web framework for Node.js.
+It simplifies routing, middleware management, and API handling.
+Used for building web applications and REST APIs.
+
+
+
+npm install express
+
+
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello, Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+
+
+1. What is Express.js?
+Express.js is a web framework for Node.js used to build web applications and RESTful APIs.
+2. How does Express.js differ from Node.js?
+Node.js is a runtime environment that executes JavaScript.
+Express.js is a framework built on Node.js that simplifies web development.
+3. What is middleware in Express.js?
+Middleware functions in Express process request objects before sending responses.
+4. Explain routing in Express.js.
+Routing refers to defining URL paths and handling HTTP requests (GET, POST, PUT, DELETE).
+5.  What is CORS, and how do you enable it in Express?
+CORS (Cross-Origin Resource Sharing) allows requests from different origins.
+Enable using the cors package.
+
