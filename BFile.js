@@ -25,10 +25,10 @@ fileSystem.appendFile('fileSystem.txt', ' good mrng. from soften', 'utf8', (err)
 
 // // // // Delete file
 
-// fileSystem.unlink('./fileSystem.txt', (err) => {
-//     if (err) throw err;
-//     console.log('File has been deleted.');
-//   });
+fileSystem.unlink('./fileSystem.txt', (err) => {
+    if (err) throw err;
+    console.log('File has been deleted.');
+  });
 
 
 
