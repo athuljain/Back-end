@@ -2,7 +2,7 @@ const fileSystem= require('fs')
 
 //write file
 
-fileSystem.writeFile('./fileSystem.txt', 'soften tech ', (err) => {
+fileSystem.writeFile('./fileSystem.txt', 'soften mern  ', (err) => {
     if (err) throw err;
     console.log('File has been written.');
   });
@@ -21,6 +21,13 @@ fileSystem.appendFile('fileSystem.txt', ' good mrng. from soften', 'utf8', (err)
     if (err) throw err;
     console.log('Data has been appended to the file.');
   });
+
+//   fileSystem.writeFile('./fileSystem.txt',"node js from soften tech",(err)=>{
+//     if(err) throw err;
+//     console.log("write file");
+    
+//   })
+
 
 
 // // // // Delete file

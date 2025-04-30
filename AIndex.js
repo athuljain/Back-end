@@ -1,11 +1,11 @@
 // core Module
 
-const server=require('http');
+// const server=require('http');
 
-server.createServer(function(req,res){
-res.write("hello from HTTP Module")
-res.end()
-}).listen("5001",()=>console.log("server running on 5001"))
+// server.createServer(function(req,res){
+// res.write("hello from HTTP Module")
+// res.end()
+// }).listen("5001",()=>console.log("server running on 5001"))
 
 // local module
 const LocalModule = require('./LocalModule');
@@ -47,29 +47,29 @@ axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
 
 //HTTP Module
 
-// const http = require("http");
+const http = require("http");
 
-// const server = http.createServer((req, res) => {
-//   res.writeHead(200, { "Content-Type": "text/plain" });
-//   res.end("Hello, Node.js!");
-// });
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hello, Node.js!");
+});
 
-// const PORT = 5000;
-// server.listen(PORT, () => {
-//   console.log(`Server listening on port ${PORT}`);
-// });
+const PORT = 5000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
 
 
 
-// const axios = require('axios');
+const axios = require('axios');
 
-// axios.get('https://jsonplaceholder.typicode.com/posts/1')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+axios.get('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 //Routing
 

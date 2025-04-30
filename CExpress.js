@@ -1,5 +1,5 @@
 
-// > Express basics
+// // > Express basics
 
 // const express = require('express');
 // const app = express();
@@ -22,7 +22,7 @@
 
 
 
-//>Express Routing with status code
+// >Express Routing with status code
 
 
 // const express = require('express');
@@ -57,17 +57,17 @@
 
 //> Get json api
 
-// const http=require('http');
-// const axios = require('axios');
+const http=require('http');
+const axios = require('axios');
 
 
-// axios.get('https://jsonplaceholder.typicode.com/posts/')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+axios.get('https://jsonplaceholder.typicode.com/posts/')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 
 
@@ -75,25 +75,25 @@
 
 //MiddileWare
 
-var express = require('express');
-var app = express();
+// var express = require('express');
+// var app = express();
 
-//Middleware function to log request protocol
-app.use('/things', function(req, res, next){
-   console.log("A request for things received ");
-   next();
-});
+// //Middleware function to log request protocol
+// app.use('/things', function(req, res, next){
+//    console.log("A request for things received ");
+//    next();
+// });
 
-// Route handler that sends the response
-app.get('/things', function(req, res){
-   res.send('Things');
-   console.log("things get");
+// // Route handler that sends the response
+// app.get('/things', function(req, res){
+//    res.send('Things');
+//    console.log("things get");
    
-});
+// });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+// app.listen(3000, () => {
+//   console.log('Server is running on port 3000');
+// });
 
 
 
