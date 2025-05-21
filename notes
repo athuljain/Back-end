@@ -4,12 +4,54 @@ Node.js is an open-source, cross-platform runtime environment for executing Java
 
 Key Features of Node.js
 JavaScript Runtime: Run JavaScript code outside the browser.
-Cross-Platform: Compatible with multiple operating systems.
+
 Non-Blocking I/O: Handles multiple requests efficiently.
+
 Package Manager (npm): Access thousands of reusable libraries.
 
+Asynchronous and Event-Driven: Non-blocking I/O operations.
+
+Fast Execution: Built on Google Chrome’s V8 engine.
+
+Single-threaded but Highly Scalable: Uses event loop and callbacks.
+
+No Buffering: Processes data in chunks.
+
+Cross-platform: Can run on Windows, Linux, and macOS
 
 
+
+
+What is the difference between Node.js and JavaScript?
+Answer:
+
+JavaScript: Runs in the browser, mainly used for frontend.
+Node.js: Runs on the server, used for backend development.
+Node.js extends JavaScript capabilities with built-in modules like fs, http, etc.
+
+
+
+What is npm?
+Answer:
+NPM stands for Node Package Manager. It is the default package manager for Node.js used to install, update, and manage external modules or libraries.
+
+
+What are modules in Node.js?
+Answer:
+Modules in Node.js are reusable blocks of code. There are three types:
+Core Modules (like http, fs)
+Local Modules (user-defined files)
+Third-party Modules (installed via npm, like express)
+
+
+
+What is the purpose of package.json?
+Answer:
+
+Holds metadata about the project.
+Lists dependencies.
+Contains scripts like start, test, etc.
+Defines project name, version, and main file.
 
 
 
