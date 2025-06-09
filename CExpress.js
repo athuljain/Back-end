@@ -2,7 +2,7 @@
 // // > Express basics
 
 const express = require('express');
-const app = express();
+// const app = express();
 const port = 3000;
 
 // Define a route for the root endpoint
@@ -124,6 +124,3 @@ axios.get('https://jsonplaceholder.typicode.com/posts/')
 
 
 // // third party middileware
-
-
-// // 
