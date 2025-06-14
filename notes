@@ -50,6 +50,85 @@ Defines project name, version, and main file.
 
 
 
+
+
+
+What is Node.js?
+Node.js is an open-source, cross-platform runtime environment for executing JavaScript code outside the browser. Built on Chrome's V8 JavaScript engine, it enables developers to use JavaScript for server-side programming, revolutionizing web development.
+
+🔑 Key Features of Node.js
+JavaScript Runtime: Run JS outside the browser.
+
+Non-Blocking I/O: Handles concurrent requests efficiently.
+
+Package Manager (npm): Thousands of libraries available.
+
+Asynchronous & Event-Driven: Efficient request handling.
+
+Fast Execution: Powered by V8 engine.
+
+Single-threaded & Scalable: Event loop architecture.
+
+No Buffering: Streams data in chunks.
+
+Cross-platform: Supports Windows, Linux, macOS.
+
+📙 Node.js Core Q&A
+1. What is the difference between Node.js and JavaScript?
+
+JavaScript runs in browsers (frontend).
+
+Node.js runs on servers (backend).
+
+Node.js adds modules like fs, http.
+
+2. What is npm?
+npm (Node Package Manager) is the default manager for Node.js packages. It helps install, update, and manage libraries.
+
+3. What are modules in Node.js?
+Reusable blocks of code.
+Types:
+
+Core Modules (e.g. fs, http)
+
+Local Modules (user-defined)
+
+Third-party Modules (via npm like express)
+
+4. What is package.json?
+It’s the metadata file for a Node.js project.
+Contains:
+
+Project info (name, version)
+
+Dependencies
+
+Scripts
+
+Entry point (e.g. index.js)
+
+5. What is the event loop in Node.js?
+It enables non-blocking I/O by offloading tasks to the OS or a thread pool, then continues execution using events and callbacks.
+
+6. What is callback hell? How to avoid it?
+Nested callbacks make code unreadable.
+Avoid using:
+
+Promises
+
+Async/Await
+
+7. What is a buffer in Node.js?
+Used to handle binary data, especially in file systems or streams.
+
+8. How is concurrency handled in Node.js?
+Node.js uses a single-threaded model with an event loop for concurrency. I/O is offloaded to the OS, and callbacks are queued.
+
+
+
+
+
+
 express js
 
 
