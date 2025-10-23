@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/mern-auth', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     console.log('MongoDB connected successfully');
   } catch (err) {
     console.error('MongoDB connection failed:', err.message);
@@ -13,3 +10,6 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+
+

@@ -8,6 +8,9 @@
 // res.end()
 // }).listen("5001",()=>console.log("server running on 5001"))
 
+
+
+
 // local module
 // const LocalModule = require('./LocalModule');
 
@@ -25,15 +28,23 @@
 
 // //Npm Module
 
-// let cl=require('cli-color')
+let cl=require('cli-color')
 
 
-// console.log(cl.blue('hello'));
-// console.log(cl.bgBlueBright("hello"));
-// console.log(cl.bgMagentaBright("soften"));
-// console.log("hello");
+console.log(cl.blue('hello'));
+console.log(cl.bgBlueBright("hello"));
+console.log(cl.bgMagentaBright("soften"));
+console.log("hello");
 
 
+
+var colors = require('colors/safe');
+ 
+console.log(colors.green('hello')); // outputs green text
+console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
+console.log(colors.inverse('inverse the color')); // inverses the color
+console.log(colors.rainbow('OMG Rainbows!')); // rainbow
+console.log(colors.trap('Run the trap')); // Drops the bass
 
 
 // const axios = require('axios');
@@ -48,17 +59,19 @@
 
 //HTTP Module
 
-// const http = require("http");
+const http = require("http");
 
-// const server = http.createServer((req, res) => {
-//   res.writeHead(200, { "Content-Type": "text/plain" });
-//   res.end("Hello, Node.js!");
-// });
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hello, Node.js!");
+});
 
-// const PORT = 5000;
-// server.listen(PORT, () => {
-//   console.log(`Server listening on port ${PORT}`);
-// });
+const PORT = 5000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
+
+
 
 
 

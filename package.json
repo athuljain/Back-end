@@ -4,6 +4,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cli-color": "^2.0.4",
+    "colors": "^1.4.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
