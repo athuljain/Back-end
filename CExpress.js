@@ -5,7 +5,7 @@
 // const app = express();
 // const port = 3000;
 
-// // Define a route for the root endpoint
+// // // Define a route for the root endpoint
 // app.get('/', (req, res) => {
 //   res.send('Hello, Express!');
 // });
@@ -19,6 +19,24 @@
 // app.listen(port, () => {
 //   console.log(`Server listening on port ${port}`);
 // });
+
+
+
+
+// express() → creates an Express application.
+
+// app.get(path, callback) → defines a route for HTTP GET request.
+
+// res.send() → sends a response to the browser.
+
+// app.listen(port, callback) → starts the server.
+
+
+
+// ------------------------------------------------------------------------
+
+
+
 
 
 
@@ -49,7 +67,25 @@
 
 // app.listen(3000, () => {
 //   console.log('Server is running on port 3000');
-// // });
+// });
+
+
+
+
+
+
+// | Status Code | Meaning               | Example                |
+// | ----------- | --------------------- | ---------------------- |
+// | 200         | OK                    | Request successful     |
+// | 201         | Created               | New resource created   |
+// | 404         | Not Found             | Resource doesn’t exist |
+// | 500         | Internal Server Error | Server-side issue      |
+
+
+
+// 🟢 res.status(code) → sets HTTP response status code.
+// 🟢 res.send(message) → sends the message or data.
+
 
 
 
@@ -69,6 +105,19 @@
 //     console.error(error);
 //   });
 
+
+
+// axios.get(url) → sends a GET request to a REST API.
+
+// .then() → handles successful response.
+
+// .catch() → handles errors.
+
+// 🟢 Use Case: Getting external data like user info, weather, etc.
+
+
+
+// ----------------------------------------------------------------------------
 
 
 
@@ -97,30 +146,65 @@
 
 
 
+// Middleware = function that executes between request and response.
+
+// app.use() → adds middleware for all or specific routes.
+
+// Always call next() to move to the next handler.
+
+// 🟢 Flow:
+
+// Request comes to /things
+
+// Middleware logs message
+
+// Route sends response
+
+// Log appears in console
+
+
+// ---------------------------------------------------------
 
 
 
-// var express = require('express');
-// var app = express();
-
-// //First middleware before response is sent
-// app.use(function(req, res, next){
-//    console.log("Start");
-//    next();
-// });
-
-// //Route handler
-// app.get('/', function(req, res, next){
-//    res.send("Middle");
-//    next();
-// });
-
-// app.use('/', function(req, res){
-//    console.log('End');
-// });
-
-// app.listen(3000);
 
 
+var express = require('express');
+var app = express();
 
-// // third party middileware
+//First middleware before response is sent
+app.use(function(req, res, next){
+   console.log("Start");
+   next();
+});
+
+//Route handler
+app.get('/', function(req, res, next){
+   res.send("Middle");
+   next();
+});
+app.get('/home', function (req,res){
+    res.send("home")
+})
+
+app.use('/', function(req, res){
+   console.log('End');
+});
+
+app.listen(3000);
+
+
+
+// | Concept                | Function               | Example                    |
+// | ---------------------- | ---------------------- | -------------------------- |
+// | Create App             | `express()`            | `const app = express();`   |
+// | Route                  | `app.get('/path', fn)` | `app.get('/', cb)`         |
+// | Send Response          | `res.send()`           | `res.send('Hello')`        |
+// | Status Code            | `res.status(code)`     | `res.status(404)`          |
+// | Middleware             | `app.use(fn)`          | `app.use(logger)`          |
+// | Start Server           | `app.listen(port)`     | `app.listen(3000)`         |
+// | JSON Response          | `res.json(obj)`        | `res.json({name:'Athul'})` |
+// | Third-party Middleware | Install with npm       | `npm install morgan cors`  |
+
+
+
