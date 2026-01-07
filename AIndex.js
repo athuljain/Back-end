@@ -10,55 +10,54 @@
 
 
 
-
 // local module
-// const LocalModule = require('./LocalModule');
+const LocalModule = require('./LocalModule');
 
-// console.log(LocalModule.add(3, 3));
-// console.log(LocalModule.subtract(10, 5));
-// console.log(LocalModule.Mul(2,3));                                        
+console.log(LocalModule.add(3, 3));
+console.log(LocalModule.subtract(10, 5));
+console.log(LocalModule.Mul(2,3));                                        
 
 
 
-// const Wish = require("./LocalModuleHello")
+const Wish = require("./LocalModuleHello")
 
-// Wish()
+Wish()
 
 
 
 // //Npm Module
 
-// let cl=require('cli-color')
+let cl=require('cli-color')
 
 
-// console.log(cl.blue('hello'));
-// console.log(cl.bgBlueBright("hello"));
-// console.log(cl.bgMagentaBright("soften"));
-// console.log("hello");
+console.log(cl.blue('hello'));
+console.log(cl.bgBlueBright("hello"));
+console.log(cl.bgMagentaBright("soften"));
+console.log("hello");
 
 
 
-// var colors = require('colors/safe');
+var colors = require('colors/safe');
  
-// console.log(colors.green('hello')); // outputs green text
-// console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
-// console.log(colors.inverse('inverse the color')); // inverses the color
-// console.log(colors.rainbow('OMG Rainbows!')); // rainbow
-// console.log(colors.trap('Run the trap')); // Drops the bass
+console.log(colors.green('hello')); // outputs green text
+console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
+console.log(colors.inverse('inverse the color')); // inverses the color
+console.log(colors.rainbow('OMG Rainbows!')); // rainbow
+console.log(colors.trap('Run the trap')); // Drops the bass
 
 
 
 
 
-// const axios = require('axios');
-// //Making a GET request
-// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
-//   .then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
+const axios = require('axios');
+//Making a GET request
+axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 
 
@@ -67,17 +66,17 @@
 
 //HTTP Module
 
-// const http = require("http");
+const http = require("http");
 
-// const server = http.createServer((req, res) => {
-//   res.writeHead(200, { "Content-Type": "text/plain" });
-//   res.end("Hello, Node.js!");
-// });
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hello, Node.js!");
+});
 
-// const PORT = 5000;
-// server.listen(PORT, () => {
-//   console.log(`Server listening on port ${PORT}`);
-// });
+const PORT = 5000;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
 
 
 
