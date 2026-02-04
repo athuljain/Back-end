@@ -11,53 +11,53 @@
 
 
 // local module
-const LocalModule = require('./LocalModule');
+//  const LocalModule = require('./LocalModule');
 
-console.log(LocalModule.add(3, 3));
-console.log(LocalModule.subtract(10, 5));
-console.log(LocalModule.Mul(2,3));                                        
+// console.log(LocalModule.add(3, 3));
+// console.log(LocalModule.subtract(10, 5));
+// console.log(LocalModule.Mul(2,3));                                        
 
 
 
-const Wish = require("./LocalModuleHello")
+// const Wish = require("./LocalModuleHello")
 
-Wish()
+// Wish()
 
 
 
 // //Npm Module
 
-let cl=require('cli-color')
+// let cl=require('cli-color')
 
 
-console.log(cl.blue('hello'));
-console.log(cl.bgBlueBright("hello"));
-console.log(cl.bgMagentaBright("soften"));
-console.log("hello");
+// console.log(cl.blue('hello'));
+// console.log(cl.bgBlueBright("hello"));
+// console.log(cl.bgMagentaBright("soften"));
+// console.log("hello");
 
 
 
-var colors = require('colors/safe');
+// var colors = require('colors/safe');
  
-console.log(colors.green('hello')); // outputs green text
-console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
-console.log(colors.inverse('inverse the color')); // inverses the color
-console.log(colors.rainbow('OMG Rainbows!')); // rainbow
-console.log(colors.trap('Run the trap')); // Drops the bass
+// console.log(colors.green('hello')); // outputs green text
+// console.log(colors.red.underline('i like cake and pies')) // outputs red underlined text
+// console.log(colors.inverse('inverse the color')); // inverses the color
+// console.log(colors.rainbow('OMG Rainbows!')); // rainbow
+// console.log(colors.trap('Run the trap')); // Drops the bass
 
 
 
 
 
-const axios = require('axios');
-//Making a GET request
-axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// const axios = require('axios');
+// //Making a GET request
+// axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 
 
@@ -66,17 +66,17 @@ axios.get('https://jsonplaceholder.typicode.com/posts/?_limit=15')
 
 //HTTP Module
 
-const http = require("http");
+// const http = require("http");
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello, Node.js!");
-});
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { "Content-Type": "text/plain" });
+//   res.end("Hello, Node.js!");
+// });
 
-const PORT = 5000;
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+// const PORT = 5000;
+// server.listen(PORT, () => {
+//   console.log(`Server listening on port ${PORT}`);
+// });
 
 
 
@@ -111,42 +111,45 @@ server.listen(PORT, () => {
 //   console.log(`Server is running at http://localhost:${port}`);
 // });
 
+
+
+
 // npm i express
 // npm i cors
 
-// const http = require('http');
-// const port = 3000;
+const http = require('http');
+const port = 3000;
 
-// const server = http.createServer((req, res) => {
-// // Set CORS headers to allow cross-origin requests (for demonstration purposes)
-// res.setHeader('Access-Control-Allow-Origin', '*');
-// res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-// res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+const server = http.createServer((req, res) => {
+// Set CORS headers to allow cross-origin requests (for demonstration purposes)
+res.setHeader('Access-Control-Allow-Origin', '*');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-// // Handle different HTTP methods
-// switch (req.method) {
-// case 'GET':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('GET request received');
-// break;
-// case 'POST':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('POST request received');
-// break;
-// case 'PUT':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('PUT request received');
-// break;
-// case 'DELETE':
-// res.writeHead(200, { 'Content-Type': 'text/plain' });
-// res.end('DELETE request received');
-// break;
-// default:
-// res.writeHead(405, { 'Content-Type': 'text/plain' });
-// res.end('Method Not Allowed');
-// }
-// });
+// Handle different HTTP methods
+switch (req.method) {
+case 'GET':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('GET request received');
+break;
+case 'POST':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('POST request received');
+break;
+case 'PUT':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('PUT request received');
+break;
+case 'DELETE':
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('DELETE request received');
+break;
+default:
+res.writeHead(405, { 'Content-Type': 'text/plain' });
+res.end('Method Not Allowed');
+}
+});
 
-// server.listen(port, () => {
-// console.log(`Server listening on port ${port}`);
-// });
+server.listen(port, () => {
+console.log(`Server listening on port ${port}`);
+});

@@ -125,12 +125,7 @@ Used to handle binary data, especially in file systems or streams.
 Node.js uses a single-threaded model with an event loop for concurrency. I/O is offloaded to the OS, and callbacks are queued.
 
 
-
-
-
-
 express js
-
 
 
 Express is the most popular Node.js web framework, and is the underlying library for a number of other popular Node.js frameworks. It provides mechanisms to:
